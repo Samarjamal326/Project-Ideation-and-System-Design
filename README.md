@@ -1,143 +1,127 @@
 # Project Ideation & System Design
 
-Welcome to the **Project Ideation and System Design** repository. This repository acts as a comprehensive planning and architectural blueprint workspace created to help evaluate, compare, and ultimately select a final-year software engineering project. 
+Welcome to the **Project Ideation and System Design** repository. This repository serves as a comprehensive architectural workspace and evaluation framework created to plan, compare, and select a final-year software engineering project or enterprise system design.
 
-It contains detailed product specifications, system architectures, database designs, API specifications, and deployment strategies for three distinct enterprise-grade system proposals.
+It contains detailed product specifications, system architectures, database designs, API specifications, UI/UX plans, and deployment strategies for **FIVE complete software project proposals**, alongside a dedicated evaluation and decision module.
 
 ---
 
 ## Repository Structure
 
-The planning repository is structured as follows:
-
 ```
 Project-Ideation-and-System-Design/
-├── README.md                              # This Root Evaluation & Comparison Matrix
+├── README.md                              # Master Overview & Comparative Evaluation Matrix
 │
-├── 01-DevSphere/                          # AI-Powered Developer Collaboration & Matching Platform
-│   ├── README.md                          # Master System Design Document (Sections 1-30)
-│   ├── architecture/                      # Architectural migration plans (Monolith to Microservices)
-│   ├── diagrams/                          # Mermaid diagram sources and export blueprints
-│   ├── ui-ux/                             # User interface screen flows and wireframe specs
-│   ├── api/                               # OpenAPI 3.0 specification schemas
-│   └── database/                          # SQL schema definitions, indexes, and ER layouts
+├── 01-DevSphere/                          # Developer Collaboration Platform
+│   ├── README.md                          # Master System Design Document
+│   ├── architecture/                      # Monolith to Microservices Migration Blueprint
+│   ├── database/                          # PostgreSQL DDL & Vector (pgvector) HNSW Indexes
+│   ├── api/                               # REST & WebSockets OpenAPI Specifications
+│   ├── ui-ux/                             # UI Wireframes & User Journey Layouts
+│   └── diagrams/                          # Mermaid System Sequence & Flowchart Sources
 │
-├── 02-Campus-Events-Platform/             # Campus Events Coordination, Booking, and Certification Platform
-│   ├── README.md                          # Master System Design Document (Sections 1-30)
-│   ├── architecture/
-│   ├── diagrams/
-│   ├── ui-ux/
-│   ├── api/
-│   └── database/
+├── 02-Campus-Events-Platform/             # Campus Engagement & Events Management Platform
+│   ├── README.md                          # Master System Design Document
+│   ├── architecture/                      # Concurrency Booking Architecture & Queueing
+│   ├── database/                          # Transaction Models, Redis Locks & DDL
+│   ├── api/                               # REST API Specifications
+│   ├── ui-ux/                             # Interactive Seat Selection & Ticket UX
+│   └── diagrams/                          # Ticket Claim Sequence & Verification Flow
 │
-└── 03-Startup-Incubator-Platform/          # Equity-Free Accelerator Administration & Matchmaking Engine
-    ├── README.md                          # Master System Design Document (Sections 1-30)
-    ├── architecture/
-    ├── diagrams/
-    ├── ui-ux/
-    ├── api/
-    └── database/
+├── 03-Startup-Incubator-Platform/          # Startup Incubator Platform
+│   ├── README.md                          # Master System Design Document
+│   ├── architecture/                      # Go/Fiber + gRPC Microservices Architecture
+│   ├── database/                          # Multi-Tenant Schema & Isolation Strategy
+│   ├── api/                               # REST & gRPC Endpoint References
+│   ├── ui-ux/                             # Venture Dashboard & Investor Workspace UX
+│   └── diagrams/                          # Pitch Deck Scoring & Matchmaking Sequence
+│
+├── 04-ML-Studio-No-Code-Analytics/        # No-Code ML Prediction & Analytics Platform
+│   ├── README.md                          # Master System Design Document
+│   ├── architecture/                      # Asynchronous ML Worker Cluster & Decoupling
+│   ├── database/                          # JSONB Schema Engine & Experiment DDL
+│   ├── api/                               # Dataset Upload, Training & Inference APIs
+│   ├── ui-ux/                             # Plotly Visual Analytics & Schema Inspector UX
+│   └── diagrams/                          # Model Training & Inference Sequence Diagrams
+│
+├── 05-AI-Stock-Market-Forecasting/        # AI Stock Market Trend Prediction System
+│   ├── README.md                          # Master System Design Document
+│   ├── architecture/                      # Low-Latency Data Stream & TFT Deep Learning
+│   ├── database/                          # TimescaleDB Time-Series DDL & Aggregates
+│   ├── api/                               # Historical Data, Signals & Backtest APIs
+│   ├── ui-ux/                             # Candlestick Canvas & Signal Indicator UX
+│   └── diagrams/                          # Forecast Pipeline & Backtest Sequence Diagrams
+│
+└── 06-Project-Evaluation/                 # Project Evaluation & Decision Framework
+    ├── README.md                          # Evaluation Framework Overview
+    ├── evaluation-matrix.md               # Weighted Scoring Matrix across 12 Criteria
+    ├── comparison-table.md                # Multi-Dimensional Architecture Comparison
+    └── decision-log.md                    # ADRs & Team Profile Selection Guidelines
 ```
 
 ---
 
-## 1. Introduction
+## Summary of the Five Software Projects
 
-A final-year engineering project serves as the bridge between academic study and professional software engineering. Selecting the right project requires evaluating not just the implementation complexity, but also the educational depth, market viability, scalability characteristics, research novelty, and modern architectural patterns.
-
-This repository details three candidate platforms designed as modular monoliths with clear progression vectors toward microservices, utilizing modern, industry-standard tech stacks (Next.js, FastAPI, PostgreSQL, Redis, Docker, and AWS).
-
----
-
-## 2. Purpose of this Repository
-
-The primary goals of this repository are to:
-1. **Accelerate Decision Making:** Provide decision-makers (faculty advisors, student groups, or stakeholders) with a structured evaluation of three distinct ideas.
-2. **Ensure Production Readiness:** Document system specifications, API designs, security protocols, database schemas, and DevOps workflows in detail so implementation can begin immediately upon selection.
-3. **Compare Key Trade-Offs:** Outline clear comparisons across critical dimensions such as AI complexity, database models, cloud deployment costs, and architectural scaling boundaries.
+1. **DevSphere (Developer Collaboration Platform):** Synthesizes GitHub repository activity, vector semantic search (`pgvector`), and multiplayer real-time workspaces to match developers with complementary teams and hiring recruiters.
+2. **Campus Engagement & Events Management Platform:** High-concurrency ticket reservation engine utilizing Redis distributed locks (Redlock), dynamic seat maps (WebSockets), and automated PDF certificates with QR verification.
+3. **Startup Incubator Platform:** Multi-tenant equity-free accelerator SaaS built with Golang, gRPC microservices, pitch deck OCR/LLM matching, and automated NDA signing workflows.
+4. **ML Studio (No-Code Machine Learning Platform):** Zero-code analytics platform supporting 7 ML tasks (Classification, Regression, Clustering, Time-Series, Recommendations, NLP, Anomaly Detection), automated preprocessing, SHAP explainability, and `.pkl` artifact exports.
+5. **AI Stock Market Trend Prediction & Forecasting System:** Deep learning quantitative finance engine combining sequence models (Temporal Fusion Transformer, LSTM, XGBoost, Prophet), TA-Lib technical indicators, FinBERT news sentiment, buy/hold/sell signals, and backtesting.
 
 ---
 
-## 3. Comparative Analysis Matrix
+## Comparative Evaluation Matrix
 
-The table below summarizes the key dimensions of the three proposed systems:
+The table below summarizes the key technical and strategic dimensions across all five candidate systems:
 
-| Dimension | 01-DevSphere | 02-Campus-Events-Platform | 03-Startup-Incubator-Platform |
-| :--- | :--- | :--- | :--- |
-| **Primary Domain** | Developer Collaboration & Hiring | Event Booking & Live Management | Accelerator/Venture Capital Administration |
-| **Technical Difficulty** | High | Medium | Medium-High |
-| **Primary Tech Stack** | Next.js, FastAPI, pgvector, Redis | Next.js, NestJS, PostgreSQL, WebSockets | Next.js, Go/Fiber, PostgreSQL, gRPC |
-| **AI Integration Depth** | Extremely High (RAG, Embeddings, Agents) | Medium (Recommendation, OCR verification) | High (Pitch Deck OCR, Matchmaking, LLM feedback) |
-| **Database Model** | Relational + Vector Database | Relational + Caching + Time-Series | Relational + Document/BSON Store |
-| **Realtime Features** | WebSockets (Chat, Collaborative Workspace) | WebSockets (Live seat map, ticket queue) | SSE/WebSockets (Investor alerts, chat) |
-| **Primary Scaling Vector**| Heavy read/write matching + AI inference | Spiky traffic (ticket sales, registrations) | Data security, audit logs, heavy multi-tenancy |
-| **Research Potential** | High (Collaborative networks, AI agent reviews) | Medium (Scheduling algorithms, queue theory) | Medium (Portfolio matching, valuation modeling) |
-| **Startup Potential** | Very High (B2B SaaS Developer hiring) | Medium-High (Local event/ ticketing niche) | High (Venture scouting & accelerator SaaS) |
-| **Deployment Complexity**| High (GPU nodes, vector indexing, ECS) | Medium (Serverless triggers, ECS Fargate) | High (Multi-tenant isolation, EKS Kubernetes) |
-
----
-
-## 4. Deep-Dive Comparison Areas
-
-### 4.1. Difficulty Comparison
-* **DevSphere (High Difficulty):** Focuses heavily on AI pipeline integration, including text embeddings generation from repository scraping, real-time code parsing, semantic searching (`pgvector`), and LLM-agent-driven pull request summaries. Dealing with vector spaces and high-frequency code analysis elevates its complexity.
-* **Campus-Events-Platform (Medium Difficulty):** Emphasizes high-concurrency ticket booking, live queuing, and QR-code validation. The challenges here lie in state synchronization (preventing double booking) and real-time updates via WebSockets rather than mathematical AI algorithms.
-* **Startup-Incubator-Platform (Medium-High Difficulty):** Deals with secure document uploads, multi-tenant database isolation, multi-party electronic contracts (NDA signatures), and workflow tracking. The difficulty lies in security, compliance, complex RBAC, and data segregation.
-
-### 4.2. Learning Opportunities
-* **DevSphere:** Offers exposure to modern AI/ML workflows (RAG, prompt engineering, vector search), developer tools integrations (GitHub API, CI/CD parsing), and asynchronous worker tasks (Celery/FastAPI).
-* **Campus-Events-Platform:** Teaches robust transaction management, concurrency control (handling race conditions during high-demand events), real-time notification architectures, and PDF/QR generation.
-* **Startup-Incubator-Platform:** Provides experience with secure, multi-tenant B2B application patterns, Go-based high-performance backends, financial/equity reporting tools, and document OCR extraction pipelines.
-
-### 4.3. Technology Comparison
-* **DevSphere** leverages the **Python ecosystem (FastAPI, LangChain, PyTorch/Transformers)** alongside Next.js, making it ideal for teams targeting ML/AI engineering.
-* **Campus-Events-Platform** uses a **unified TypeScript stack (Next.js, NestJS/Node.js, Prisma)**, simplifying codebase sharing and making it the fastest to develop.
-* **Startup-Incubator-Platform** employs **Golang (Go/Fiber, gRPC)** alongside Next.js, providing experience in high-performance microservices, protocol buffers, and low-latency networking.
-
-### 4.4. AI Integration Comparison
-* **DevSphere:** Highly advanced. Uses custom vector embeddings models, similarity metrics (cosine distance) for matching developers to teams, and LLMs for semantic review synthesis.
-* **Campus-Events-Platform:** Basic to Moderate. Uses collaborative filtering for event recommendations and simple OCR to read event flyers and verify event data.
-* **Startup-Incubator-Platform:** Advanced. Uses OCR and LLMs to analyze PDF pitch decks, extract financial metrics, and score matching algorithms between startup profiles and VC investment theses.
-
-### 4.5. Cloud & Deployment Comparison
-* **DevSphere:** Deployed on **AWS ECS Fargate** with a dedicated **SageMaker** or HuggingFace endpoint for vector embedding generation. Requires persistent vector indexing in **RDS PostgreSQL (pgvector)**.
-* **Campus-Events-Platform:** Utilizes a highly elastic **AWS Lambda + API Gateway** serverless structure for API routes to handle sudden ticket spikes, alongside **ElastiCache (Redis)** for queueing.
-* **Startup-Incubator-Platform:** Requires containerization with **Kubernetes (EKS)** to handle distinct tenant namespaces or highly secure isolated Docker instances for processing sensitive financial documents.
-
-### 4.6. Scalability Comparison
-* **DevSphere:** Scaled by offloading heavy background code ingestion tasks to asynchronous worker pools (Celery + RabbitMQ) and partitioning vector spaces.
-* **Campus-Events-Platform:** Scaled by implementing distributed locks (Redis Redlock) and optimistic database locking to manage transaction-heavy concurrent ticket inventory claims.
-* **Startup-Incubator-Platform:** Scaled horizontally at the application layer via Go microservices communicating over gRPC, with read-replicas for intensive reporting dashboards.
-
-### 4.7. Research Paper Potential
-* **DevSphere (Excellent):** Provides potential research subjects in semantic search, collaborative networks modeling, LLM-based evaluation metrics for software engineers, and natural language portfolio querying.
-* **Campus-Events-Platform (Moderate):** Focuses on queuing optimization, load distribution algorithms, and event recommendation engines.
-* **Startup-Incubator-Platform (Moderate-High):** Opportunities in venture-matching algorithms, predictive financial modelling for seed-stage startups, and secure document processing under RBAC.
-
-### 4.8. Startup Potential
-* **DevSphere (Extremely High):** Developer recruitment is a massive industry. A platform that evaluates developers based on actual code metrics and matches them semantically to team needs has direct B2B SaaS value.
-* **Campus-Events-Platform (Moderate):** Local campus and local city ticketing markets are highly saturated but present viable niche opportunities.
-* **Startup-Incubator-Platform (High):** Accelerators, VC firms, and university incubators rely on fragmented systems (emails, spreadsheets, DocuSign). A unified, AI-driven operating system for accelerators represents a strong enterprise SaaS product.
+| Dimension | 01-DevSphere | 02-Campus-Events | 03-Startup-Incubator | 04-ML-Studio | 05-Stock-Forecasting |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Primary Domain** | Dev Hiring & Matching | High-Concurrency Booking | Accelerator Administration| No-Code ML Analytics | Quant AI Stock Forecasting |
+| **Technical Complexity**| High | Medium | Medium-High | High | Extremely High |
+| **Primary Tech Stack** | Next.js, FastAPI, pgvector | Next.js, NestJS, PostgreSQL | Next.js, Go/Fiber, gRPC | Next.js, FastAPI, Scikit-Learn| Next.js, FastAPI, PyTorch (TFT) |
+| **AI Integration Depth**| High (RAG, Vector, Code Review) | Medium (Recommendation, OCR) | High (Pitch OCR, Matchmaking)| Extremely High (7 ML Paradigms)| Maximum (TFT, LSTM, FinBERT) |
+| **Database Model** | Relational + Vector DB | Relational + Redis Caching | Multi-Tenant Relational | Relational + JSONB Engine | Relational + TimescaleDB |
+| **Realtime Features** | WebSockets (Workspace/Chat) | WebSockets (Seat Map/Queue)| SSE / WebSockets (Alerts) | SSE (Training Progress) | WebSockets (Price Feed) |
+| **Primary Scaling Vector**| Scraper workers & Vector search| Ticket claims & Redis locks | Tenant isolation & gRPC | Compute workers & RAM limits | Streaming API & TimescaleDB |
+| **Research Potential** | High (Semantic matching) | Medium (Queue optimization) | Medium (Venture matching) | High (AutoML / XAI) | Extremely High (Financial DL) |
+| **Startup Potential** | Very High (Recruitment SaaS)| Medium-High (Campus niche) | High (Accelerator SaaS) | High (Freemium No-Code ML) | High (Fintech Signal SaaS) |
+| **Weighted Total Score** | **8.85 / 10** | **7.55 / 10** | **8.15 / 10** | **8.35 / 10** | **8.95 / 10** |
 
 ---
 
-## 5. Final Selection & Recommendation
+## Deep-Dive Technical Comparison Summary
 
-Based on the evaluation criteria, we recommend **DevSphere** for teams looking to maximize their technical exposure, research output, and resume value.
+### 1. Difficulty & Complexity
+* **Project 05 (Stock Market Forecasting):** Highest algorithmic complexity due to time-series non-stationarity, deep sequence architectures (Temporal Fusion Transformer, LSTM), multi-feature financial engineering (TA-Lib), and real-time streaming constraints.
+* **Project 01 (DevSphere):** High complexity focused on natural language processing, vector similarity indexing (`pgvector`), GitHub API scraping queues, and multiplayer WebSockets.
+* **Project 04 (ML Studio):** High data engineering complexity, managing asynchronous worker clusters, memory limits on large file uploads, and generating SHAP explainability charts.
+* **Project 03 (Startup Incubator):** Medium-High complexity centered around Golang gRPC microservices, multi-tenant schema isolation, and contract workflow state machines.
+* **Project 02 (Campus Events):** Medium complexity focused on handling high-concurrency ticket spikes, Redis locks, dynamic seat maps, and QR code verification.
 
-### Why DevSphere?
-1. **Industry Alignment:** AI-driven software development is the fastest-growing sector. Gaining experience in vector databases, semantic search, and LLM orchestration is highly attractive to modern tech recruiters.
-2. **Scope Adaptability:** DevSphere can easily be scaled down to a robust Modular Monolith for a 3-month prototype, or scaled up into a microservice-based asynchronous platform for a full-year thesis.
-3. **Research Relevance:** The potential to write an academic paper on *"AI-Driven Developer Matching Using Vector Semantic Analysis of Public Repositories"* is significantly higher than the other two projects.
-
-*For teams looking for a direct, transaction-heavy business application with rapid deployment, the **Campus-Events-Platform** serves as the ideal backup.*
+### 2. Learning & Career Opportunities
+* **AI / ML Focus:** Projects **05**, **01**, and **04** provide unmatched exposure to modern AI frameworks (PyTorch, SentenceTransformers, Scikit-Learn, SHAP, FinBERT).
+* **Systems & Backend Engineering:** Project **03** offers direct experience with Golang, gRPC protocol buffers, and Kubernetes multi-tenant security.
+* **High-Concurrency Web Engineering:** Project **02** provides hands-on mastery of Node.js/NestJS, Redis distributed locks, and WebSocket state synchronization.
 
 ---
 
-## 6. Implementation Readiness
+## Master Selection Recommendation
 
-Each directory contains a complete, self-contained implementation plan, including architecture diagrams, database schemas (with DDL/ER models), API specifications (REST endpoint details), folder structures, and testing strategies. Refer to the respective `README.md` documents to start:
+Based on overall weighted scores across technical rigor, research potential, resume impact, and market viability:
 
-- Go to [01-DevSphere/README.md](file:///C:/Users/Prakash%20Gusain%20Ji/.gemini/antigravity-ide/scratch/Project-Ideation-and-System-Design/01-DevSphere/README.md)
-- Go to [02-Campus-Events-Platform/README.md](file:///C:/Users/Prakash%20Gusain%20Ji/.gemini/antigravity-ide/scratch/Project-Ideation-and-System-Design/02-Campus-Events-Platform/README.md)
-- Go to [03-Startup-Incubator-Platform/README.md](file:///C:/Users/Prakash%20Gusain%20Ji/.gemini/antigravity-ide/scratch/Project-Ideation-and-System-Design/03-Startup-Incubator-Platform/README.md)
+1. **Top Recommended Project:** [05-AI-Stock-Market-Forecasting](file:///C:/Users/Prakash%20Gusain%20Ji/.gemini/antigravity-ide/scratch/Project-Ideation-and-System-Design/05-AI-Stock-Market-Forecasting/README.md) (Score: **8.95 / 10**)
+2. **Runner-Up Recommended Project:** [01-DevSphere](file:///C:/Users/Prakash%20Gusain%20Ji/.gemini/antigravity-ide/scratch/Project-Ideation-and-System-Design/01-DevSphere/README.md) (Score: **8.85 / 10**)
+
+---
+
+## Implementation Readiness
+
+Every project directory in this repository contains a complete, production-grade architectural specification:
+
+* Explore **[01-DevSphere](file:///C:/Users/Prakash%20Gusain%20Ji/.gemini/antigravity-ide/scratch/Project-Ideation-and-System-Design/01-DevSphere/README.md)**
+* Explore **[02-Campus-Events-Platform](file:///C:/Users/Prakash%20Gusain%20Ji/.gemini/antigravity-ide/scratch/Project-Ideation-and-System-Design/02-Campus-Events-Platform/README.md)**
+* Explore **[03-Startup-Incubator-Platform](file:///C:/Users/Prakash%20Gusain%20Ji/.gemini/antigravity-ide/scratch/Project-Ideation-and-System-Design/03-Startup-Incubator-Platform/README.md)**
+* Explore **[04-ML-Studio-No-Code-Analytics](file:///C:/Users/Prakash%20Gusain%20Ji/.gemini/antigravity-ide/scratch/Project-Ideation-and-System-Design/04-ML-Studio-No-Code-Analytics/README.md)**
+* Explore **[05-AI-Stock-Market-Forecasting](file:///C:/Users/Prakash%20Gusain%20Ji/.gemini/antigravity-ide/scratch/Project-Ideation-and-System-Design/05-AI-Stock-Market-Forecasting/README.md)**
+* Access the **[06-Project-Evaluation](file:///C:/Users/Prakash%20Gusain%20Ji/.gemini/antigravity-ide/scratch/Project-Ideation-and-System-Design/06-Project-Evaluation/README.md)** framework
